@@ -5,32 +5,36 @@ function validation(weight, height) {
         isNaN(weight) ||
         isNaN(height) ||
         weight <= 0 ||
-        height <= 0
+        height <= 0 ||
+        weight === Infinity ||
+        height === Infinity
     ) {
-        console.log("Vui lòng nhập số chiều cao và cân nặng của bạn");
-        return;
+        return "Vui lòng nhập số chiều cao và cân nặng hợp lệ!";
     }
-
-    const chiSoBMI = (weight, height) => {
-        if (weight / height ** 2 < 18.5) {
-            console.log("Thiếu cân");
-        } else if (
-            weight / height ** 2 >= 18.5 &&
-            weight / height ** 2 <= 22.9
-        ) {
-            console.log("Bình thường");
-        } else if (weight / height ** 2 >= 23 && weight / height ** 2 <= 24.9) {
-            console.log("Thừa cân");
-        } else if (weight / height ** 2 >= 25) {
-            console.log("Béo phì");
-        }
-    };
-
-    return chiSoBMI(weight, height);
+    const bmi = calculateBMI(weight, height);
+    return determineBMI(bmi);
 }
+
+function calculateBMI(weight, height) {
+    return weight / height ** 2;
+}
+
+const determineBMI = (bmi) => {
+    if (bmi < 18.5) {
+        return "Thiếu cân";
+    } else if (bmi >= 18.5 && bmi <= 22.9) {
+        return "Bình Thường";
+    } else if (bmi > 22.9 && bmi <= 24.9) {
+        return "Thừa cân";
+    } else {
+        return "Béo phì";
+    }
+};
 
 let weight = parseFloat(prompt("Nhập cân nặng của bạn (kg): "));
 
 let height = parseFloat(prompt("Nhập chiều cao của bạn (m): "));
 
-validation(weight, height);
+var result = validation(weight, height);
+
+console.log(result);
