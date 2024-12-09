@@ -24,7 +24,7 @@ const determineBMI = (bmi) => {
         return "Thiếu cân";
     } else if (bmi >= 18.5 && bmi <= 22.9) {
         return "Bình Thường";
-    } else if (bmi > 22.9 && bmi <= 24.9) {
+    } else if (bmi > 22.9 && bmi < 25) {
         return "Thừa cân";
     } else {
         return "Béo phì";
