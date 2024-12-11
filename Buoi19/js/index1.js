@@ -1,4 +1,4 @@
-const checkSquare = (number) => {
+const validationInput = (number) => {
     if (isNaN(number) || number === Infinity || number === "") {
         console.log("Vui lòng nhập số hợp lệ.");
         return false;
@@ -9,23 +9,20 @@ const checkSquare = (number) => {
         return false;
     }
 
-    if (number === 0) {
-        return true;
-    }
     return true;
 };
 
-const isSpuare = (number) => {
-    if (!checkSquare(number)) {
+const printSquare = (number) => {
+    if (!validationInput(number)) {
         return;
     }
-    for (let i = 0; i <= number; i++) {
-        if (checkSquare(i)) {
-            console.log(` Số chính phương của ${i} là: ${i ** 2}`);
+    for (let i = 1; i <= number; i++) {
+        if (validationInput(i)) {
+            console.log(` Số chính phương của ${i} là: ${i * i}`);
         }
     }
 };
 
 const number = +prompt("Nhập số number: ");
 
-isSpuare(number);
+printSquare(number);

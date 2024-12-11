@@ -7,8 +7,12 @@
     </head>
     <body>
         <script>
-            console.log(parseInt("Hoang"));
-            console.log(Number.isInteger("123"));
+            function getDescription(text) {
+                console.log(text); // write something in the BROWSER and see it in the console
+                return text.substring(0, 10) + "...";
+            }
+
+            console.log(getDescription("Hello JavaScript"));
         </script>
     </body>
 </html>

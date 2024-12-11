@@ -1,4 +1,4 @@
-const isMultiplication = () => {
+const generateMultiplicationTable = () => {
     let result = "";
     for (let i = 1; i <= 10; i++) {
         result += `<h1> Bảng cửu chương số ${i} </h1><br>`;
@@ -11,4 +11,4 @@ const isMultiplication = () => {
     document.body.innerHTML = result;
 };
 
-isMultiplication();
+generateMultiplicationTable();
