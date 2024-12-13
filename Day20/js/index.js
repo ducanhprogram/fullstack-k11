@@ -8,15 +8,9 @@ const students = [
 ];
 
 function analyzeStudents(students) {
-    if (students.length === 0) {
-        return null;
-    }
-
-    // Khởi tạo highestStudent và lowestStudent từ phần tử đầu tiên
     let highestStudent = students[0];
     let lowestStudent = students[0];
 
-    // Khởi tạo các nhóm
     let group = {
         A: [],
         B: [],
@@ -24,11 +18,13 @@ function analyzeStudents(students) {
         D: [],
     };
 
-    // Duyệt qua danh sách sinh viên
+    if (students.length === 0) {
+        return null;
+    }
+
     for (let i = 0; i < students.length; i++) {
         const student = students[i];
 
-        // Tìm sinh viên có điểm cao nhất và thấp nhất
         if (student.score > highestStudent.score) {
             highestStudent = student;
         }
@@ -49,7 +45,6 @@ function analyzeStudents(students) {
         }
     }
 
-    // Trả về kết quả
     return {
         highest: highestStudent,
         lowest: lowestStudent,
@@ -57,7 +52,6 @@ function analyzeStudents(students) {
     };
 }
 
-// Gọi hàm và hiển thị kết quả
 const result = analyzeStudents(students);
 console.log(result);
 console.log("Sinh viên có điểm cao nhất: ", result.highest);
