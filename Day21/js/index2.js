@@ -21,11 +21,11 @@ const handleLogin = (email, password) => {
 };
 
 // Đăng ký
-handleRegister("Le Duc Anh", "123456", "leducanhled@gmail.com");
-handleRegister("Manh Huy", "782349", "huy@gmail.com");
+handleRegister("Nguyen Van A", "123456", "nguyenvana@email.com");
+handleRegister("Nguyen Van B", "1234567", "nguyenvanb@email.com");
 
 // Đăng nhập
-const dataLogin = handleLogin("leducanhled@gmail.com", "123456");
+const dataLogin = handleLogin("nguyenvana@email.com", "123456");
 
 console.log("data = ", data);
 console.log("dataLogin =", dataLogin);
