@@ -89,5 +89,3 @@ const flattenedCategories = flattenCategories(categories);
 console.log(getCategoryName(flattenedCategories, 3)); // Output: "Apple"
 console.log(getCategoryName(flattenedCategories, 10)); // Output: "Non-Fiction"
 console.log(getCategoryName(flattenedCategories, 99));
-
-const newArr = ["Hoang", "Anh", "Minh", "Huong", "Lan", "Minh"];
