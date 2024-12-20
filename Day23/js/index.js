@@ -32,6 +32,15 @@ const products = [
 ];
 
 const getTopProducts = (products, top) => {
+    if (!Array.isArray(products)) {
+        console.log("Products phải là một mảng");
+        return [];
+    }
+
+    if (typeof top !== "number" || top <= 0 || !Number.isInteger(top)) {
+        console.log("Giá trị top phải là một số nguyên dương.");
+        return [];
+    }
     let topProducts = [];
     products.forEach((product) => {
         topProducts.push(product);

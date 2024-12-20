@@ -50,11 +50,19 @@ const categories = [
 ];
 
 const flattenCategories = (categories, level = 0) => {
+    if (!Array.isArray(categories)) {
+        console.error("Invalid input: categories must be an array.");
+        return [];
+    }
     var flatArray = [];
 
     // console.log(categories);
 
     for (const category of categories) {
+        if (typeof category !== "object" || category === null) {
+            console.error("Invalid input: each category must be an object.");
+            continue; /// Bỏ qua mục không hợp lệ
+        }
         flatArray.push({ id: category.id, name: category.name, level });
 
         if (category.children) {
