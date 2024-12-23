@@ -9,15 +9,15 @@ const fruits = [
     "kiwi",
 ];
 
-const removeDuremoveDuplicate = (arr) => {
-    return arr.reduce((accu, curr) => {
-        if (!accu.includes(curr)) {
-            accu.push(curr);
+const removeDuplicate = (arr) => {
+    return arr.reduce((acc, curr) => {
+        if (!acc.includes(curr)) {
+            acc.push(curr);
         }
-        return accu;
+        return acc;
     }, []);
 };
 
-const result = removeDuremoveDuplicate(fruits);
+const result = removeDuplicate(fruits);
 
 console.log(result);

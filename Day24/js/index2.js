@@ -23,14 +23,16 @@ const fibonacci = (n) => {
     // console.log(fidArray);
     console.log(fidArray.join(" "));
 };
-fibonacci(5); // 0 1 1 2 3
+const input = +prompt("Nhập số phần tử của dãy Fibonacci: ");
 
-fibonacci(10); // 0 1 1 2 3 5 8 13 21 34
+fibonacci(input); // 0 1 1 2 3
 
-fibonacci(0); // Số phần tử không hợp lệ
+// fibonacci(10); // 0 1 1 2 3 5 8 13 21 34
 
-fibonacci(-5); // Số phần tử không hợp lệ
+// fibonacci(0); // Số phần tử không hợp lệ
 
-fibonacci("abc"); // Số phần tử không hợp lệ
+// fibonacci(-5); // Số phần tử không hợp lệ
 
-fibonacci(1); // 0
+// fibonacci("abc"); // Số phần tử không hợp lệ
+
+// fibonacci(1); // 0
