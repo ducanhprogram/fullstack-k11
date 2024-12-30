@@ -1,5 +1,5 @@
 Object.prototype.filter2 = function (callback) {
-    var newArr = [];
+    let newArr = [];
 
     if (typeof callback !== "function") {
         return;
@@ -9,7 +9,7 @@ Object.prototype.filter2 = function (callback) {
         if (!(i in this)) {
             continue;
         }
-        var check = callback(this[i], i, this);
+        let check = callback(this[i], i, this);
 
         if (check) {
             newArr[newArr.length] = this[i];
