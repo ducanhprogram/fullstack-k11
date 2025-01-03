@@ -6,17 +6,19 @@ Năm 2009: ECMAScript 5 ra đời với nhiều cải tiến quan trọng như c
 Năm 2015:ECMAScript 6 (ES6) ra đời,là phiên bản lớn nhất của ECMAScript với nhiều cải tiến và tính năng được coi là vượt bậc.
 Năm 2016 - nay:Các phiên bản ECMAScript mới được ra mắt liên tục,với nhiều cải tiến và tính năng mới.Cho đến nay javaScript đã trở thành một trong số những ngôn ngữ được ưa chuộng và sử dụng nhiều nhất thế giới.`;
 
-const fixContent = (content) => {
-    content = content.replace(/([.,;:!?])(?!\s)/g, "$1 ");
-    return content;
-};
-
-let fixedContent = fixContent(jsContent);
-
-// Highlight từ khóa
-let output = "";
 let count = 0;
 const printHighlight = (content, keyword) => {
+    if (
+        typeof content !== "string" ||
+        typeof keyword !== "string" ||
+        content.trim() === "" ||
+        keyword.trim() === "" ||
+        content.length < keyword.length
+    ) {
+        return `<p>Dữ liệu không hợp lệ. Vui lòng kiểm tra lại!!.</p>`;
+    }
+
+    let output = "";
     let position = content.toLowerCase().indexOf(keyword.toLowerCase());
     while (position !== -1) {
         count++;
@@ -33,7 +35,7 @@ const printHighlight = (content, keyword) => {
     return output;
 };
 
-let result = printHighlight(fixedContent, keyword); // Chèn thẻ HTML vào nội dung đã sửa
+let result = printHighlight(jsContent, keyword);
 
 // In ra HTML
 let html = `
@@ -43,3 +45,5 @@ let html = `
 `;
 
 document.write(html);
+
+//https://ducanhprogram.github.io/fullstack-k11/Day26/index.html
