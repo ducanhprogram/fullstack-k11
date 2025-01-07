@@ -62,6 +62,7 @@ const convertNested = (arr, level = 0) => {
     }
 
     let output = [];
+    let arr = [];
 
     let children = [];
     arr.forEach((item) => {
