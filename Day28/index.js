@@ -3,6 +3,7 @@ console.log(timeNextYear);
 
 function countdown() {
     let now = new Date();
+    // console.log(now);
     const remainingTime = timeNextYear - now;
     // console.log(remainingTime);
 
