@@ -9,6 +9,7 @@ function countdown() {
 
     if (remainingTime > 0) {
         const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        console.log(days);
         const hours = Math.floor(
             (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
         );
@@ -17,13 +18,17 @@ function countdown() {
         );
         const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-        document.body.innerHTML = "";
+        document.close();
         document.write(
             `<h1>Còn ${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây là đến tết 2026</h1>`
         );
+
+        // document.getElementById(
+        //     "demo"
+        // ).innerHTML = `Còn ${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây là đến tết 2026`;
     } else {
         clearInterval(interval);
-        document.body.innerHTML = "";
+        document.close();
         document.write(`Chúc Mừng Năm Mới 2026!`);
     }
 }
