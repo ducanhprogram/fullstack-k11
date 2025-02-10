@@ -42,7 +42,7 @@ const menu = [
 ];
 
 const listMenu = (menu, parentId = 0) => {
-    if (!Array.isArray(menu)) {
+    if (!Array.isArray(menu) || menu.length < 0) {
         return;
     }
     const ul = document.createElement("ul");
@@ -60,8 +60,6 @@ const listMenu = (menu, parentId = 0) => {
             // console.log(li);
 
             const childrenUl = listMenu(menu, item.id);
-
-            console.log(childrenUl);
 
             if (childrenUl.children.length > 0) {
                 li.appendChild(childrenUl);

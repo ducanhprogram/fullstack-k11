@@ -121,6 +121,10 @@ footRow.appendChild(totalOrderCell);
 
 tfoot.appendChild(footRow);
 
+table.border = "1";
+table.cellPadding = "5";
+table.cellSpacing = "0";
+
 table.appendChild(thead);
 table.appendChild(tbody);
 table.appendChild(tfoot);

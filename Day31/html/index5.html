@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                position: relative;
+            }
+
+            li {
+                position: relative;
+                padding: 10px 20px;
+                cursor: pointer;
+                border: 1px solid #ddd;
+                width: 300px;
+            }
+
+            li ul {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 100%;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+                font-weight: 500;
+            }
+
+            li:hover > ul {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="menu"></ul>
+        <script src="../js/index5.js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/index1.css" />
+    </head>
+    <body>
+        <main>
+            <h1 class="page-heading">Create your Todo-List</h1>
+
+            <!-- Form -->
+            <form action="" class="todo-form">
+                <input
+                    type="text"
+                    id="todo-input"
+                    class="input"
+                    placeholder="What are your tasks for today?"
+                    spellcheck="false"
+                />
+                <button id="submit" class="submit-btn">Add</button>
+            </form>
+            <!-- end form -->
+
+            <ul id="task-list" class="task-list"></ul>
+
+            <div class="delete-all">
+                <button id="delete-task" class="delte-task">
+                    Delete All task
+                </button>
+            </div>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+
+        <script src="../js/index1.js"></script>
+    </body>
+</html>

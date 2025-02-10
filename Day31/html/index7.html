@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                padding: 20px;
+                width: 80%;
+                position: relative;
+            }
+
+            .input-group {
+                position: relative;
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .input-group > label {
+                position: absolute;
+                left: 80px;
+
+                margin-right: 40px;
+            }
+
+            label ~ input {
+                width: 400px;
+                padding: 10px;
+                border: none;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            }
+
+            .calculate {
+                position: absolute;
+                right: 150px;
+                top: 40%;
+                display: flex;
+                flex-wrap: wrap;
+                width: 140px;
+                gap: 20px;
+            }
+
+            button {
+                background: #0070ff;
+                padding: 10px 30px;
+                border: none;
+                color: #fff;
+                border-radius: 5px;
+                position: absolute;
+                bottom: -50px;
+                left: 0;
+                right: 0;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: #0056b3;
+            }
+
+            .input-group {
+                margin-top: 50px;
+                display: flex;
+                position: relative;
+                left: 80px;
+            }
+
+            .result {
+                width: 380px;
+                height: 14px;
+                font-size: 18px;
+                background: #dce4ec;
+                padding: 15px;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Bé Tập Tính Website</h1>
+
+            <div class="input-group">
+                <label for="number1">Nhập số thứ nhất</label>
+                <input type="number" id="number1" />
+            </div>
+
+            <div class="input-group">
+                <label for="number2">Nhập số thứ hai</label>
+                <input type="number" id="number2" />
+            </div>
+
+            <div class="input-group">
+                <label>Kết quả</label>
+                <div class="result"></div>
+            </div>
+
+            <div class="calculate">
+                <label
+                    ><input
+                        type="radio"
+                        name="operation"
+                        value="add"
+                    />Cộng</label
+                >
+
+                <label
+                    ><input
+                        type="radio"
+                        name="operation"
+                        value="subtract"
+                    />Trừ</label
+                >
+
+                <label
+                    ><input
+                        type="radio"
+                        name="operation"
+                        value="multiply"
+                    />Nhân</label
+                >
+
+                <label
+                    ><input
+                        type="radio"
+                        name="operation"
+                        value="divide"
+                    />Chia</label
+                >
+                <button onclick="calculate()">Tính</button>
+            </div>
+            <!-- end .calculate -->
+        </div>
+        <script src="../js/index7.js"></script>
+    </body>
+</html>
